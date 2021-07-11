@@ -27,6 +27,7 @@ func OpenSqlxDB(dbConfig *util.Config) (*sqlx.DB, error) {
 	})
 	if err != nil {
 		fmt.Printf("unable to establish pgx Connection Pool %s", err)
+		return nil, err
 	}
 
 	opts := make([]stdlib.OptionOpenDBFromPool, 0)

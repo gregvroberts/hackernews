@@ -7,3 +7,5 @@ postgresup:
 postgresdown:
 	docker kill hackernews-postgres
 	docker rm hackernews-postgres
+createdb:
+	docker exec -it hackernews-postgres createdb --username=root --owner=root hackernews
